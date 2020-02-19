@@ -29,3 +29,15 @@ jobs:
             -var "aws_region=${AWS_REGION}" \
             -var "account_ids=${account_ids}" \
             ami.json
+
+workflows:
+  version: 2
+  pr-check-workflow:
+    jobs:
+    - build
+  build-deploy-workflow:
+    jobs:
+    - build:
+        filters:
+          branches:
+            only: master
