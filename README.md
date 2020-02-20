@@ -1,4 +1,4 @@
-[7:17 PM, 2/19/2020] Bae❣: # Packer
+# Packer
 
 * Website: https://www.packer.io
 * IRC: `#packer-tool` on Freenode
