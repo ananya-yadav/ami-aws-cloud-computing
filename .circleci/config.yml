@@ -29,6 +29,7 @@ jobs:
             -var "aws_region=${AWS_REGION}" \
             -var "account_ids=${account_ids}" \
             -var "source_ami=${source_ami}" \
+            -var "bucket_name=${bucket_name}" \
             ami.json
 
 workflows:
