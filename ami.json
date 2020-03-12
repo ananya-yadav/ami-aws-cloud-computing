@@ -7,7 +7,7 @@
         "source_ami": "{{env `source_ami`}}",
         "ssh_username": "ubuntu",
         "account_ids": "{{env `account_ids`}}",
-        "bucket_name": "bucket_name"
+        "bucket_name": ""
     },
     "builders": [
         {
