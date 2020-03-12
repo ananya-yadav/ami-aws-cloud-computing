@@ -39,7 +39,7 @@
         {
             "type": "shell",
             "execute_command": "{{.Vars}} sudo -E -S bash '{{.Path}}'",
-            "scripts": ["initialsetup.sh", "codedeployagent.sh"],
+            "scripts": ["initialsetup.sh", "codedeploy.sh"],
             "environment_vars": ["bucket_name={{user `bucket_name`}}", "aws_region={{user `aws_region`}}"]
         }
     ]
