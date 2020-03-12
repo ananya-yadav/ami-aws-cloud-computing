@@ -6,7 +6,8 @@
         "subnet_id": "",
         "source_ami": "{{env `source_ami`}}",
         "ssh_username": "ubuntu",
-        "account_ids": "{{env `account_ids`}}"
+        "account_ids": "{{env `account_ids`}}",
+        "bucket_name": ""
     },
     "builders": [
         {
@@ -37,11 +38,9 @@
     "provisioners": [
         {
             "type": "shell",
-            "environment_vars": [
-                "FOO=foo"
-            ],
             "execute_command": "{{.Vars}} sudo -E -S bash '{{.Path}}'",
-            "script": "initialsetup.sh"
+            "scripts": ["initialsetup.sh", "codedeployagent.sh"],
+            "environment_vars": ["bucket_name={{user `bucket_name`}}", "aws_region={{user `aws_region`}}"]
         }
     ]
 }
