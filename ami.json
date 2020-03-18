@@ -40,7 +40,7 @@
             "type": "shell",
             "execute_command": "{{.Vars}} sudo -E -S bash '{{.Path}}'",
             "scripts": ["initialsetup.sh", "codedeploy.sh","cloudWatchAgent.sh"],
-            "environment_vars": ["bucket_name={{user `bucket_name`}}", "AWS_REGION={{user `aws_region`}}"]
+            "environment_vars": ["bucket_name={{user `bucket_name`}}", "aws_region={{user `aws_region`}}"]
         }
     ]
 }
