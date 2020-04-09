@@ -7,3 +7,4 @@ chmod +x ./install
 sudo ./install auto
 sudo service codedeploy-agent start
 sudo service codedeploy-agent status
+sudo curl -o /home/ubuntu/rds-combined-ca-bundle.pem https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
